@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FORME — базовая одежда с характером.">
+    <title>FORME — одежда с характером</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="announcement">
+        НОВЫЙ СЕЗОН / SS 26
+        <span>Бесплатная доставка от 8 000 ₽</span>
+    </div>
+
+    <header class="header">
+        <a class="logo" href="#home">FORME</a>
+
+        <nav class="navigation">
+            <a href="#products">Новинки</a>
+            <a href="#categories">Категории</a>
+            <a href="#about">О бренде</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="header-action" id="searchButton" type="button">Поиск</button>
+            <button class="header-action" id="favoritesButton" type="button">
+                Избранное (<span id="favoritesCount">0</span>)
+            </button>
+            <button class="header-action cart-button" id="cartButton" type="button">
+                Корзина (<span id="cartCount">0</span>)
+            </button>
+        </div>
+
+        <button class="menu-button" id="menuButton" aria-label="Открыть меню">
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <nav class="mobile-navigation" id="mobileNavigation">
+        <a href="#products">Новинки</a>
+        <a href="#categories">Категории</a>
+        <a href="#about">О бренде</a>
+    </nav>
+
+    <main id="home">
+        <section class="hero container">
+            <div class="hero-content">
+                <p class="eyebrow">КОЛЛЕКЦИЯ / 2026</p>
+
+                <h1>
+                    Форма,<br>
+                    которая говорит<br>
+                    за тебя
+                </h1>
+
+                <p class="hero-description">
+                    Базовые вещи с характером. Чистые линии,
+                    выразительные силуэты и свобода быть собой.
+                </p>
+
+                <a class="button button-dark" href="#products">
+                    Смотреть коллекцию <span>↗</span>
+                </a>
+                  <p class="hero-index">
+                    01–04 <span>/</span> НОВАЯ КОЛЛЕКЦИЯ
+                  </p>
+            </div>
+
+            <div class="hero-image">
+                <img src="img/woomen.png" alt="Женская коллекция FORME">
+            </div>
+        </section>
+
+        <section class="categories container" id="categories">
+            <a class="category" href="#products">
+                <img src="img/woman.png" alt="Женская одежда">
+                <span>ЖЕНСКОЕ ↗</span>
+            </a>
+
+            <a class="category" href="#products">
+                <img src="img/man_mini.png" alt="Мужская одежда">
+                <span>МУЖСКОЕ ↗</span>
+            </a>
+
+            <a class="category" href="#products">
+                <img src="img/bag_mini.png" alt="Аксессуары">
+                <span>АКСЕССУАРЫ ↗</span>
+            </a>
+        </section>
+
+        <section class="products-section" id="products">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">ПОДОБРАНО ДЛЯ ВАС</p>
+                        <h2>Выбор редакции</h2>
+                    </div>
+
+                    <select id="categoryFilter" aria-label="Фильтр товаров">
+                        <option value="all">Все товары</option>
+                        <option value="women">Женское</option>
+                        <option value="men">Мужское</option>
+                        <option value="accessories">Аксессуары</option>
+                    </select>
+                </div>
+
+                
+<div class="product-grid" id="productGrid">
+
+    <!-- Товар 1 -->
+    <article class="product" data-category="women">
+        <div class="product-image">
+            <img src="img/things.png" alt="Футболка Essential">
+            <button class="favorite-button" type="button" aria-label="Добавить в избранное" aria-pressed="false">♡</button>
+            <button class="add-button"
+                data-name="Футболка Essential"
+                data-price="3900">
+                В корзину +
+            </button>
+        </div>
+
+        <div class="product-info">
+            <div>
+                <h3>Футболка Essential</h3>
+                <p>Хлопок 100% · Молочный</p>
+            </div>
+            <strong>3 900 ₽</strong>
+        </div>
+    </article>
+
+    <!-- Товар 2 -->
+    <article class="product" data-category="men">
+        <div class="product-image">
+            <img src="img/men.png" alt="Рубашка Urban">
+            <button class="favorite-button" type="button" aria-label="Добавить в избранное" aria-pressed="false">♡</button>
+            <button class="add-button"
+                data-name="Рубашка Urban"
+                data-price="7500">
+                В корзину +
+            </button>
+        </div>
+
+        <div class="product-info">
+            <div>
+                <h3>Рубашка Urban</h3>
+                <p>Хлопок · Оливковый</p>
+            </div>
+            <strong>7 500 ₽</strong>
+        </div>
+    </article>
+
+    <!-- Товар 3 -->
+    <article class="product" data-category="accessories">
+        <div class="product-image">
+            <img src="img/bag.png" alt="Сумка Form">
+            <button class="favorite-button" type="button" aria-label="Добавить в избранное" aria-pressed="false">♡</button>
+            <button class="add-button"
+                data-name="Сумка Form"
+                data-price="9900">
+                В корзину +
+            </button>
+        </div>
+
+        <div class="product-info">
+            <div>
+                <h3>Сумка Form</h3>
+                <p>Натуральная кожа · Эспрессо</p>
+            </div>
+            <strong>9 900 ₽</strong>
+        </div>
+    </article>
+
+    <!-- Товар 4 -->
+    <article class="product" data-category="women">
+        <div class="product-image">
+            <img src="img/sviter.png" alt="Жакет Form">
+            <button class="favorite-button" type="button" aria-label="Добавить в избранное" aria-pressed="false">♡</button>
+            <button class="add-button"
+                data-name="Жакет Form"
+                data-price="12900">
+                В корзину +
+            </button>
+        </div>
+
+        <div class="product-info">
+            <div>
+                <h3>Свитер Soft</h3>
+                <p>Мягкий трикотаж · Серый</p>
+            </div>
+            <strong>12 900 ₽</strong>
+        </div>
+    </article>
+
+</div>
+
+
+                <p class="empty-message" id="emptyMessage" hidden>
+                    В этой категории пока нет товаров.
+                </p>
+            </div>
+        </section>
+
+        <section class="about container" id="about">
+            <img src="img/men.png" alt="Одежда FORME">
+
+            <div class="about-content">
+                <p class="eyebrow">НАША ФИЛОСОФИЯ</p>
+
+                <h2>
+                    Меньше вещей,<br>
+                    больше смысла
+                </h2>
+
+                <p>
+                    FORME — независимый бренд современной одежды. Мы создаём универсальные вещи, которые легко сочетать, приятно носить и хочется сохранять надолго
+                </p>
+
+                <a class="button button-lime" href="#newsletter">
+                    Узнать о бренде <span>↗</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="newsletter" id="newsletter">
+            <div class="container newsletter-content">
+                <div>
+                    <p class="eyebrow">THE FORME LETTER</p>
+                    <h2>Будь первым, кто узнает о новинках</h2>
+                </div>
+
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Твой e-mail" required>
+                    <button type="submit">Подписаться ↗</button>
+                </form>
+            </div>
+
+            <p class="form-message" id="formMessage"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-links">
+    <a href="#" data-placeholder="Доставка и оплата">Доставка и оплата</a>
+    <a href="#" data-placeholder="Возврат">Возврат</a>
+    <a href="#" data-placeholder="Контакты">Контакты</a>
+</div>
+    </footer>
+
+
+    <dialog class="utility-dialog search-dialog" id="searchDialog">
+        <button class="close-button" id="closeSearch" aria-label="Закрыть" type="button">×</button>
+        <p class="eyebrow">ПОИСК ПО КОЛЛЕКЦИИ</p>
+        <h2>Найти вещь</h2>
+        <label class="search-field">
+            <span class="visually-hidden">Поиск товаров</span>
+            <input id="searchInput" type="search" placeholder="Название товара..." autocomplete="off">
+        </label>
+        <p class="dialog-hint" id="searchHint">Начните вводить название товара.</p>
+    </dialog>
+
+    <dialog class="utility-dialog favorites-dialog" id="favoritesDialog">
+        <button class="close-button" id="closeFavorites" aria-label="Закрыть" type="button">×</button>
+        <p class="eyebrow">ВАША ПОДБОРКА</p>
+        <h2>Избранное</h2>
+        <div class="favorites-list" id="favoritesList"></div>
+        <p class="dialog-hint" id="favoritesEmpty">Пока нет избранных товаров.</p>
+    </dialog>
+
+    <dialog class="cart-dialog" id="cartDialog">
+        <button class="close-button" id="closeCart" aria-label="Закрыть">
+            ×
+        </button>
+
+        <p class="eyebrow">ВАШ ЗАКАЗ</p>
+        <h2>Корзина</h2>
+
+        <div id="cartItems"></div>
+
+        <p class="cart-total">
+            Итого: <strong id="cartTotal">0 ₽</strong>
+        </p>
+
+        <p class="note">
+            Демонстрационный магазин. Заказ не отправляется.
+        </p>
+    </dialog>
+
+    <script src="script.js"></script>
+</body>
+</html>
